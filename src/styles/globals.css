@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400&display=swap');
+
+:root {
+  --max-width: 1100px;
+  --border-radius: 12px;
+  --font-mono: Menlo;
+
+  --foreground-rgb: 0, 0, 0;
+  --primary-color-rgb: 32, 123, 229;
+  --light-grey-rgb: 201, 197, 211;
+
+  /* ROQ overrides */
+  --roq-default-font-name: 'Inter', sans-serif;
+  --roc-notification-bell-button-padding: 0px;
+  --roc-notification-bell-icon-wrapper-margin: 0px;
+  --roc-notification-bell-size: 24px;
+  --roq-chat-message-bell-button-padding: 0px;
+  --roc-notification-bell-icon-wrapper-width: 22px;
+  --roc-notification-bell-icon-wrapper-height: 22px;
+  --roq-chat-message-bell-size: 24px;
+  --roc-notification-bell-icon-wrapper-color: 'none';
+  --roq-badge-text-color: var(--chakra-colors-accent-content);
+  --roq-badge-background-color: var(--chakra-colors-accent-main);
+  --roq-badge-count-padding: 4px 6.5px;
+  --roq-avatar-size-medium-width: 2rem;
+  --roq-avatar-size-medium-height: 2rem;
+  --roq-avatar-initials-font-weight: 500;
+  --roq-container-border: 1px solid var(--chakra-colors-base-300);
+  --roq-container-border-radius: 12px;
+  --roq-user-invite-input-container-background-color: var(--chakra-colors-base-200);
+  --roq-user-invite-input-tag-background-color: var(--chakra-colors-base-200);
+  --roq-user-invite-role-dropdown-control-background: var(--chakra-colors-base-200);
+  --roq-modal-background: var(--chakra-colors-chakra-body-bg);
+  --roq-pagination-size-dropdown-control-background: var(--chakra-colors-base-200) !important;
+  --roq-pagination-size-dropdown-label-text-color: var(--chakra-colors-base-content) !important;
+  --roq-user-invite-button-icon-wrapper-color: var(--chakra-colors-primary-content);
+  --roq-user-invite-button-label-wrapper-color: var(--chakra-colors-primary-content);
+  --roq-resend-user-invite-button-color: var(--chakra-colors-primary-content);
+  --roq-modal-footer-confirm-btn-color: var(--chakra-colors-primary-content);
+  --roq-modal-footer-btn-font-size: 1rem;
+  --roq-modal-footer-btn-min-height: 2.5rem;
+  --roq-color-success: var(--chakra-colors-state-success-main) !important;
+}
+
+.roq-badge__count {
+  font-family: 'Inter', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background-color: #f4f7ff;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(var(--primary-color-rgb));
+}
+
+.btn {
+  font-size: 18px;
+  line-height: 18px;
+  padding: 15px 50px;
+  height: 50px;
+  border-radius: 16px;
+  border: solid 3px transparent;
+  cursor: pointer;
+  background-color: rgb(var(--primary-color-rgb));
+  color: #ffffff;
+}
+
+.btn.btn-block {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.btn.btn-sm {
+  height: 30px;
+  font-size: 12px;
+  line-height: 12px;
+  border-radius: 8px;
+  padding: 5px 20px;
+}
+
+.btn:hover {
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(var(--primary-color-rgb), 0.5);
+}
+
+.btn:active {
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(var(--primary-color-rgb), 1);
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+  background-color: rgba(var(--primary-color-rgb), 0.5);
+}
+
+.roq-badge__count {
+  font-size: 10px;
+}
+
+.roq-user-invites-table__container {
+  background: var(--chakra-colors-base-100) !important;
+}
+
+.roq-avatar__initials {
+  font-size: 0.75rem;
+}
+
+.react-datepicker-popper {
+  z-index: 9999 !important;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.table-text {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+
+  @supports (-webkit-line-clamp: 3) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: initial;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+}
+
+.image-uploader .roq-file-upload__upload {
+  width: 100%;
+}
+
+.roq-user-invite-role-dropdown__control div div {
+  color: var(--chakra-colors-base-content) !important;
+}
+.roq-user-invite-input {
+  color: var(--chakra-colors-base-content) !important;
+}
+
+.roq-pagination-size-dropdown__menu {
+  background: var(--chakra-colors-base-100) !important;
+}
+.roq-pagination-size-dropdown__option--focused,
+.roq-pagination-size-dropdown__option--selected {
+  background: var(--chakra-colors-primary-transparent) !important;
+}
+.roq-user-invites-table__header__action-wrapper__action-button {
+  height: 2rem;
+  font-size: 0.875rem;
+  border-radius: 8px;
+}
+.roq-modal__footer-btn {
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.roq-user-invites-table__tab__table__status__canceled {
+  color: var(--chakra-colors-state-success-main);
+  background: var(--chakra-colors-state-success-transparent);
+  font-size: var(--chakra-fontSizes-xs);
+  height: 22px;
+  min-width: 70px;
+  border: none;
+}
+
+.roq-user-invites-table__tab__table__status {
+  font-size: var(--chakra-fontSizes-xs);
+  height: 22px;
+  min-width: 70px;
+  border: none;
+}
+
+.roq-user-invites-table__tab__table__status__pending {
+  color: var(--chakra-colors-state-warning-main);
+  background: var(--chakra-colors-state-warning-transparent);
+}
+.roq-user-invites-table__tab__table__status__expired,
+.roq-user-invites-table__tab__table__status__canceled {
+  color: var(--chakra-colors-state-error-main);
+  background: var(--chakra-colors-state-error-transparent);
+}
+.roq-user-invites-table__tab__table__status__accepted {
+  color: var(--chakra-colors-state-success-main);
+  background: var(--chakra-colors-state-success-transparent);
+}
